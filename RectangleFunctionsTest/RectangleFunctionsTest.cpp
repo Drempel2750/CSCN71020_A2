@@ -14,26 +14,27 @@ namespace RectangleFunctionsTest
 
 		TEST_METHOD(GetPerimeterFunctionality)
 		{
-			int result = 0;
+			int result = 0;//result initialized to 0
 			int length = 2, width = 2;
-			int* lenPtr = &length, * widPtr = &width;
+			int* lenPtr = &length, * widPtr = &width;//length and width pointers initialized
 
 			result = getPerimeter(lenPtr, widPtr);
-			Assert::AreEqual(8, result);
+			Assert::AreEqual(8, result);//expected result is 8 for perimeter.
 		}
 		TEST_METHOD(GetAreaFunctionality)
 		{
-			int result = 0;
+			int result = 0;//result initialized to 0.
 			int length = 4, width = 2;
-			int* lenPtr = &length, * widPtr = &width;
+			int* lenPtr = &length, * widPtr = &width;//length and width pointers initialized
 
 			result = getArea(lenPtr, widPtr);
-			Assert::AreEqual(8, result);
+			Assert::AreEqual(8, result);//expected result is 8 for area.
 		}
 		TEST_METHOD(SetLengthLowerLimitFunctionality)
 		{
 			int input = 0;
 			int resultLen = 2;
+			//input and resultLen both initialized
 
 			int* lenPtr = &resultLen;
 			setLength(input, lenPtr);
