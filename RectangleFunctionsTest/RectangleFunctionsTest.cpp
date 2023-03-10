@@ -34,8 +34,11 @@ namespace RectangleFunctionsTest
 		{
 			int input = 0;
 			int resultLen = 2;
-			//input and resultLen both initialized
-
+			//input and resultLen both initialized. resultLen is initialized to 2 because it is a value which will not be
+			//used as input. For some tests if input and resultLen are the same, the test will report a false negative. for ex.
+			//if the values are both initialized to 0, for some cases the test would fail, since zero is outside of the accepted 
+			//values meaning that the pointer variable would not be updated, but the assert would show false, since the values are the same.
+			//this is done for all tests below.
 			int* lenPtr = &resultLen;
 			setLength(input, lenPtr);
 			Assert::AreNotEqual(input, *lenPtr);
