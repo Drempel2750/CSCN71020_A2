@@ -93,6 +93,6 @@ namespace RectangleFunctionsTest
 			setWidth(input, WidPtr);
 			Assert::AreEqual(input, *WidPtr);
 		}//Will test that the pointer is updated to the proper value using input value between 1 and 99(inclusive)
-		//Test Should pass with both *widPtr and input being 26
+		//Test Should pass with both *widPtr and input being 25 after the function is called.
 	};
 }
